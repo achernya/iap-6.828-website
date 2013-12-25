@@ -4,6 +4,7 @@ date: '2014-1-14'
 description:
 categories: ['lab']
 tags: ['mmu', 'virtual memory', 'page tables']
+permalink: 'lab/lab2/'
 ---
 
 Introduction

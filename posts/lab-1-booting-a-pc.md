@@ -4,6 +4,7 @@ date: '2014-1-9'
 description:
 categories: ['lab']
 tags: ['gdb', 'assembly', 'booting']
+permalink: 'lab/lab1/'
 ---
 
 Introduction
