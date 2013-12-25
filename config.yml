@@ -3,3 +3,6 @@ production_url: "http://achernya.scripts.mit.edu/"
 
 "theme-bootstrap-2" :
   "use" : "theme"
+
+"posts":
+   "sort" : ["date", "asc"]
