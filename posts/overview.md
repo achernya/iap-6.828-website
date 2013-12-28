@@ -11,7 +11,7 @@ permalink: 'overview'
 Description
 -----------
 
-Caffienated 6.828 is a fast-paced whirlwind introduction to operating
+Caffeinated 6.828 is a fast-paced whirlwind introduction to operating
 systems, aimed at giving students an as-close-as-possible to an
 authentic 6.828 experience during an IAP term. The MIT course catalog
 lists 6.828 as:
@@ -26,10 +26,10 @@ communication, coordination, and the interaction between software and
 hardware.  Individual laboratory assignments involve implementation of
 a small operating system in C, with some x86 assembly.
 
-Who should take Caffienated 6.828?
+Who should take Caffeinated 6.828?
 ----------------------------------
 
-Caffienated 6.828 is primarily focused on graduating Seniors and
+Caffeinated 6.828 is primarily focused on graduating Seniors and
 M.Eng. students that did not have an opportunity to take the
 full-fledged 6.828 class in Fall 2013. We encourage anyone that has
 the opportunity to take the full 6.828 at a later date to do so even
@@ -45,7 +45,7 @@ on the course web site in addition to being sent via email.
 Grading policy
 --------------
 
-Grades in Caffienated 6.828 will be awarded P/NR, based on the results
+Grades in Caffeinated 6.828 will be awarded P/NR, based on the results
 the lab assignments. You must complete all lab assignments
 satisfactorily to receive a passing grade. There will be an optional,
 but highly recommended, final mini-project. There will be no exam.
