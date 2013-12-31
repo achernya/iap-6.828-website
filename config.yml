@@ -1,5 +1,5 @@
-base_path: "iap-828"
-production_url: "http://achernya.scripts.mit.edu/"
+base_path: "/iap/6.828/"
+production_url: "https://sipb.mit.edu/iap/6.828/"
 
 "theme-bootstrap-2" :
   "use" : "theme"
