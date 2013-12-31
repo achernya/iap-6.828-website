@@ -20,3 +20,8 @@ _root:
     enable: false
   rss:
     enable: false
+
+widgets :
+  google_prettify :
+    use : default
+    linenums : false
