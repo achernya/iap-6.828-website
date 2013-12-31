@@ -7,3 +7,19 @@ static:
 pages:
   permalink: '/:relative_path/:filename'
   sort: ["position", "asc"]
+  paginator:
+    enable: false
+  rss:
+    enable: false
+
+lab:
+  paginator:
+    enable: false
+  rss:
+    enable: false
+
+_root:
+  paginator:
+    enable: false
+  rss:
+    enable: false
