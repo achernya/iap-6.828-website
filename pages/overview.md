@@ -66,7 +66,7 @@ large-scale programming projects.
 
 We expect you either to know C already or to be able to pick it up
 quickly. We will be (briefly) teaching x86 assembly in lecture, and the
-the [referencess page](reference) has links to further material.
+the [references page](reference) has links to further material.
 
 As mentioned above, expect the workload of this class to be significant.
 Even without the accelerated schedule, 6.828 during the semester is a
