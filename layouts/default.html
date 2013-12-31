@@ -5,7 +5,10 @@
     <title>Caffeinated 6.828: {{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="{{ urls.base_path }}/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    {{# stylesheets.load }}
+      bootstrap.min.css
+    {{/ stylesheets.load }}
+
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -34,7 +37,9 @@
       {{{ content }}}
     </div>
 
-    <script src="{{ urls.base_path }}/static/jquery-1.10.2.min.js"></script>
-    <script src="{{ urls.base_path }}/static/bootstrap/js/bootstrap.min.js"></script>
+    {{# javascripts.load }}
+      jquery-1.10.2.min.js
+      bootstrap.min.js
+    {{/ javascripts.load }}
   </body>
 </html>
