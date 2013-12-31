@@ -61,7 +61,7 @@ of the git branch with the initial code you downloaded from our server
 for this assignment.
 
 We have set up the appropriate compilers and simulators for you on
-Athena. To use them, run add -f 6.828. You must run this command every
+Athena. To use them, run `add -f 6.828`. You must run this command every
 time you log in (or add it to your `~/.environment` file). If you get
 obscure errors while compiling or running `qemu`, double check that you
 added the course locker.
@@ -166,7 +166,7 @@ of the corresponding branch.
 In the case that make handin does not work properly, try fixing the
 problem with Git commands. Or you can run make tarball. This will make a
 tar file for you, which you can then upload via our [web
-interface](/6.828/submit/). make handin provides more specific
+interface](/6.828/submit/). `make handin` provides more specific
 directions.
 
 For Lab 1, you do not need to turn in answers to any of the questions
@@ -205,7 +205,7 @@ Assembly](http://www.delorie.com/djgpp/doc/brennan/brennan_att_inline_djgpp.html
 > **Exercise 1**
 
 > Familiarize yourself with the assembly language materials available
-> on [the 6.828 reference page](../../reference.html). You don't have
+> on [the 6.828 reference page](../../reference). You don't have
 > to read them now, but you'll almost certainly want to refer to some
 > of this material when reading and writing x86 assembly.
 
@@ -217,7 +217,7 @@ syntax we'll be using with the GNU assembler in JOS.
 
 Certainly the definitive reference for x86 assembly language programming
 is Intel's instruction set architecture reference, which you can find on
-[the 6.828 reference page](../../reference.html) in two flavors: an HTML
+[the 6.828 reference page](../../reference) in two flavors: an HTML
 edition of the old [80386 Programmer's Reference
 Manual](../../readings/i386/toc.htm), which is much shorter and easier
 to navigate than more recent manuals but describes all of the x86
@@ -519,7 +519,7 @@ could it accomplish in just 16 bytes?
 > doing. You might want to look at [Phil Storrs I/O Ports
 > Description](http://web.archive.org/web/20040404164813/members.iweb.net.au/~pstorr/pcbook/book2/book2.htm),
 > as well as other materials on the [6.828 reference materials
-> page](../../reference.html). No need to figure out all the details -
+> page](../../reference). No need to figure out all the details -
 > just the general idea of what the BIOS is doing first.
 
 When the BIOS runs, it sets up an interrupt descriptor table and
@@ -579,7 +579,7 @@ boot loader must perform two main functions:
     special I/O instructions. If you would like to understand better
     what the particular I/O instructions here mean, check out the "IDE
     hard drive controller" section on [the 6.828 reference
-    page](../../reference.html). You will not need to learn much about
+    page](../../reference). You will not need to learn much about
     programming specific devices in this class: writing device drivers
     is in practice a very important part of OS development, but from a
     conceptual or architectural viewpoint it is also one of the least
@@ -687,7 +687,7 @@ which stands for "Executable and Linkable Format".
 
 Full information about this format is available in [the ELF
 specification](../../readings/elf.pdf) on [our reference
-page](../../reference.html), but you will not need to delve very deeply
+page](../../reference), but you will not need to delve very deeply
 into the details of this format in this class. Although as a whole the
 format is quite powerful and complex, most of the complex parts are for
 supporting dynamic loading of shared libraries, which we will not do in
