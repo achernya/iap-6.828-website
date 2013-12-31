@@ -1,10 +1,6 @@
 ---
 title: 'Lab 4: Preemptive Multitasking and the Shell'
 date: '2014-1-28'
-description:
-categories: ['lab']
-tags: ['multitasking', 'shell', 'environment']
-permalink: 'lab/lab4/'
 ---
 
 Overview

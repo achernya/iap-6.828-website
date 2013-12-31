@@ -1,8 +1,9 @@
 base_path: "/iap/6.828/"
 production_url: "https://sipb.mit.edu/iap/6.828/"
 
-"theme-bootstrap-2" :
-  "use" : "theme"
+static:
+  use: static
 
-"posts":
-   "sort" : ["date", "asc"]
+pages:
+  permalink: '/:relative_path/:filename'
+  sort: ["position", "asc"]

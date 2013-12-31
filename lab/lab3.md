@@ -1,10 +1,6 @@
 ---
 title: 'Lab 3: User Environments'
 date: '2014-1-21'
-description:
-categories: ['lab']
-tags: ['process', 'environment', 'ring', 'privilege']
-permalink: 'lab/lab3/'
 ---
 
 Introduction

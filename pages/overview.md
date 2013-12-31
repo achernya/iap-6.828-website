@@ -1,10 +1,6 @@
 ---
 title: 'Overview'
-date: '2014-1-1'
-description:
-tags: ['logistics']
-categories: ['administrivia']
-permalink: 'overview'
+position: 1
 ---
 
 
