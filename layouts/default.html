@@ -5,7 +5,7 @@
     <title>Caffeinated 6.828: {{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ urls.base_path }}/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -18,7 +18,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="/">Caffeinated 6.828</a>
+          <a class="navbar-brand" href="{{ urls.base_path }}">Caffeinated 6.828</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -34,7 +34,7 @@
       {{{ content }}}
     </div>
 
-    <script src="/static/jquery-1.10.2.min.js"></script>
-    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{ urls.base_path }}/static/jquery-1.10.2.min.js"></script>
+    <script src="{{ urls.base_path }}/static/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
