@@ -10,6 +10,14 @@ the Unix API (a Linux Athena machine, your laptop with Linux or Mac OS,
 etc.).  Please submit your shell to the the [submission web
 site](../../submit) at any time before the first lecture.
 
+While you shouldn't be shy about emailing the [staff mailing
+list](mailto:sipb-iap-6.828@mit.edu) if you get stuck or don't
+understand something in this exercise, we do expect you to be able to
+handle this level of C programming on your own for the rest of the
+class. If you're not very familiar with C, consider this a quick check
+to see how familiar you are. Again, do feel encouraged to ask us for
+help if you have any questions.
+
 Download the [skeleton](../../files/sh.c) of the xv6 shell, and look it
 over. The skeleton shell contains two main parts: parsing shell commands and
 implementing them. The parser recognizes only simple shell commands such as the
