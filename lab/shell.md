@@ -8,9 +8,9 @@ interface and the shell by implementing several features in a small
 shell.  You can do this assignment on any operating system that supports
 the Unix API (a Linux Athena machine, your laptop with Linux or Mac OS,
 etc.).  Please submit your shell to the the [submission web
-site](../submit) at any time before the first lecture.
+site](../../submit) at any time before the first lecture.
 
-Download the [skeleton](../files/sh.c) of the xv6 shell, and look it
+Download the [skeleton](../../files/sh.c) of the xv6 shell, and look it
 over. The skeleton shell contains two main parts: parsing shell commands and
 implementing them. The parser recognizes only simple shell commands such as the
 following:
@@ -90,7 +90,7 @@ $ a.out < t.sh
 ```
 
 Don't forget to submit your solution to the [submission web
-site](../submit), with or without challenge solutions.
+site](../../submit), with or without challenge solutions.
 
 Challenge exercises
 -------------------
