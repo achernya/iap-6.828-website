@@ -21,6 +21,13 @@ _root:
   rss:
     enable: false
 
+files :
+  use: static
+  paginator:
+    enable: false
+  rss:
+    enable: false
+
 widgets :
   google_prettify :
     use : default
