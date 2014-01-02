@@ -68,7 +68,7 @@ added the course locker.
 
 If you are working on a non-Athena machine, you'll need to install
 `qemu` and possibly `gcc` following the directions on the [tools
-page](../../tools.html). We've made several useful debugging changes to
+page](../../tools). We've made several useful debugging changes to
 `qemu` and some of the later labs depend on these patches, so you must
 build your own. If your machine uses a native ELF toolchain (such as
 Linux and most BSD's, but notably *not* OS X), you can simply install
@@ -85,7 +85,7 @@ pair, and let the server know your public key.
 
 The lab code comes with a script that helps you to set up access to your
 hand-in repository. Before running the script, you must have an account
-at our [submission web interface](/6.828/submit/). On the login page,
+at our [submission web interface](../../submit/). On the login page,
 type in your Athena user name and click on "Mail me my password". You
 will receive your `6.828` password in your mailbox shortly. Note that
 every time you click the button, the system will assign you a new random
@@ -166,7 +166,7 @@ of the corresponding branch.
 In the case that make handin does not work properly, try fixing the
 problem with Git commands. Or you can run make tarball. This will make a
 tar file for you, which you can then upload via our [web
-interface](/6.828/submit/). `make handin` provides more specific
+interface](../../submit/). `make handin` provides more specific
 directions.
 
 For Lab 1, you do not need to turn in answers to any of the questions
