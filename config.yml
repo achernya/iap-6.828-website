@@ -28,6 +28,13 @@ files :
   rss:
     enable: false
 
+readings :
+  use: static
+  paginator:
+    enable: false
+  rss:
+    enable: false
+
 widgets :
   google_prettify :
     use : default
