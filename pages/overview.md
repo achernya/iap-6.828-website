@@ -163,7 +163,7 @@ Staff
 
 - Geoffrey Thomas
 
-- Kata Hurst
+- Kata (Patrick Hurst)
 
 - Adam Glasgall
 
