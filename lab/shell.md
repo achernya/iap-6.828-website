@@ -94,7 +94,7 @@ you can run the above pipeline.  You might find the man pages for
 Now you should be able the following command correctly:
 
 ```
-$ a.out < t.sh
+$ ./a.out < t.sh
 ```
 
 Don't forget to submit your solution to the [submission web
