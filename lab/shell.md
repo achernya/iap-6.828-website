@@ -62,6 +62,9 @@ have to write is for the ' ' case in `runcmd`.  To test that you can run
 "ls".  You might find it useful to look at the manual page for `exec`;
 type `man 3 exec`.
 
+You do not have to implement quoting (i.e., treating the text between
+double-quotes as a single argument).
+
 I/O redirection
 ---------------
 
@@ -77,6 +80,10 @@ you, so your job is just filling out the missing code in `runcmd` for
 those symbols.  Make sure your implementation runs correctly with the
 above test input.  You might find the man pages for `open` (`man 2
 open`) and `close` useful.
+
+Note that this shell will not process quotes in the same way that
+`bash`, `tcsh`, `zsh` or other UNIX shells will, and your sample file
+`x.txt` is expected to contain the quotes.
 
 Implement pipes
 ---------------
@@ -109,5 +116,6 @@ to your shell.  You might try one of the following suggestions:
  - Implement lists of commands, separated by `;`
  - Implement subshells by implementing `(` and `)`
  - Implement running commands in the background by supporting `&` and `wait`
+ - Implement quoting of arguments
 
 All of these require making changing to the parser and the `runcmd` function.
