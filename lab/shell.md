@@ -8,7 +8,7 @@ interface and the shell by implementing several features in a small
 shell.  You can do this assignment on any operating system that supports
 the Unix API (a Linux Athena machine, your laptop with Linux or Mac OS,
 etc.).  Please submit your shell to the the [submission web
-site](../../submit) at any time before the first lecture.
+site](https://exokernel.scripts.mit.edu/submit/) at any time before the first lecture.
 
 While you shouldn't be shy about emailing the [staff mailing
 list](mailto:sipb-iap-6.828@mit.edu) if you get stuck or don't
@@ -105,7 +105,7 @@ $ ./a.out < t.sh
 ```
 
 Don't forget to submit your solution to the [submission web
-site](../../submit), with or without challenge solutions.
+site](https://exokernel.scripts.mit.edu/submit/), with or without challenge solutions.
 
 Challenge exercises
 -------------------

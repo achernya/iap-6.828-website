@@ -85,7 +85,7 @@ pair, and let the server know your public key.
 
 The lab code comes with a script that helps you to set up access to your
 hand-in repository. Before running the script, you must have an account
-at our [submission web interface](../../submit/). On the login page,
+at our [submission web interface](https://exokernel.scripts.mit.edu/submit/). On the login page,
 type in your Athena user name and click on "Mail me my password". You
 will receive your `6.828` password in your mailbox shortly. Note that
 every time you click the button, the system will assign you a new random
@@ -166,7 +166,7 @@ of the corresponding branch.
 In the case that make handin does not work properly, try fixing the
 problem with Git commands. Or you can run make tarball. This will make a
 tar file for you, which you can then upload via our [web
-interface](../../submit/). `make handin` provides more specific
+interface](https://exokernel.scripts.mit.edu/submit/). `make handin` provides more specific
 directions.
 
 For Lab 1, you do not need to turn in answers to any of the questions
