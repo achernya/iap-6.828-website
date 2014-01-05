@@ -1,2 +1,3 @@
 source "https://rubygems.org"
-gem 'ruhoh', "~> 2"
+gem 'ruhoh', github: 'achernya/ruhoh.rb'
+gem 'redcarpet', github: 'vmg/redcarpet'
