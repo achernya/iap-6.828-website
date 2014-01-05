@@ -36,6 +36,7 @@ readings :
     enable: false
 
 widgets :
-  google_prettify :
-    use : default
+  syntax :
+    use : prettify
     linenums : false
+    cdn : false
