@@ -650,31 +650,28 @@ stop and review some of the basics of C programming.
 
 > **Exercise 4**
 
-> Read about programming with pointers in C. The best reference for
-> the C language is *The C Programming Language* by Brian Kernighan
-> and Dennis Ritchie (known as 'K&R'). We recommend that students
+> Download the code for [pointers.c](../../files/pointers.c), run it, and make
+> sure you understand where all of the printed values come from. In
+> particular, make sure you understand where the pointer addresses in
+> lines 1 and 6 come from, how all the values in lines 2 through 4 get
+> there, and why the values printed in line 5 are seemingly corrupted.
+
+> If you're not familiar with pointers, *The C Programming Language* by Brian Kernighan
+> and Dennis Ritchie (known as 'K&R') is a good reference. Students can
 > purchase this book (here is an [Amazon
 > Link](http://www.amazon.com/C-Programming-Language-2nd/dp/0131103628/sr=8-1/qid=1157812738/ref=pd_bbs_1/104-1502762-1803102?ie=UTF8&s=books))
 > or find one of [MIT's 7
-> copies](http://library.mit.edu/F/AI9Y4SJ2L5ELEE2TAQUAAR44XV5RTTQHE47P9MKP5GQDLR9A8X-10422?func=item-global&doc_library=MIT01&doc_number=000355242&year=&volume=&sub_library=).
+> copies](http://library.mit.edu/F/AI9Y4SJ2L5ELEE2TAQUAAR44XV5RTTQHE47P9MKP5GQDLR9A8X-10422?func=item-global&doc_library=MIT01&doc_number=000355242&year=&volume=&sub_library=). 3 copies are also available for perusal in the [SIPB Office](http://sipb.mit.edu/).
 
-Read 5.1 (Pointers and Addresses) through 5.5 (Character Pointers and
-Functions) in K&R. Then download the code for [pointers.c](pointers.c),
-run it, and make sure you understand where all of the printed values
-come from. In particular, make sure you understand where the pointer
-addresses in lines 1 and 6 come from, how all the values in lines 2
-through 4 get there, and why the values printed in line 5 are seemingly
-corrupted.
+> [A tutorial by Ted Jensen](../../readings/pointers.pdf) that cites
+> K&R heavily is available in the course readings.
 
-There are other references on pointers in C, though not as strongly
-recommended. [A tutorial by Ted Jensen](../../readings/pointers.pdf)
-that cites K&R heavily is available in the course readings.
-
-*Warning:* Unless you are already thoroughly versed in C, do not skip or
-even skim this reading exercise. If you do not really understand
-pointers in C, you will suffer untold pain and misery in subsequent
-labs, and then eventually come to understand them the hard way. Trust
-us; you don't want to find out what "the hard way" is.
+> *Warning:* Unless you are already thoroughly versed in C, do not
+> skip or even skim this reading exercise. If you do not really
+> understand pointers in C, you will suffer untold pain and misery in
+> subsequent labs, and then eventually come to understand them the
+> hard way. Trust us; you don't want to find out what "the hard way"
+> is.
 
 To make sense out of `boot/main.c` you'll need to know what an ELF
 binary is. When you compile and link a C program such as the JOS kernel,
