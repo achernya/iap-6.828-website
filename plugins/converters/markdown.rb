@@ -10,14 +10,18 @@ class Ruhoh
       
       def self.convert(content)
         require 'redcarpet'
-        toc = Redcarpet::Markdown.new(Redcarpet::Render::HTML_TOC)
         markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new(:with_toc_data => true),
           :autolink => true, 
           :fenced_code_blocks => true,
 	  :tables => true,
         )
-        #toc.render(content)
         markdown.render(content)
+      end
+
+      def self.tocconvert(content)
+        require 'redcarpet'
+        toc = Redcarpet::Markdown.new(Redcarpet::Render::HTML_TOC)
+        toc.render(content)
       end
     end
   end
