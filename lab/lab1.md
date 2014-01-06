@@ -916,7 +916,7 @@ later labs why `printfmt.c` is located in the separate `lib` directory.
 >     ```
 >
 > 3.  For the following questions you might wish to consult the notes for
->     Lecture 2. These notes cover GCC's calling convention on the x86.
+>     Lecture 1. These notes cover GCC's calling convention on the x86.
 >
 >     Trace the execution of the following code step-by-step:
 >
