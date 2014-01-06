@@ -441,8 +441,8 @@ practical challenges of OS development.
 In this portion of the lab, you'll use QEMU's debugging facilities to
 investigate how an IA-32 compatible computer boots.
 
-Open two terminal windows. In one, enter make qemu-gdb (or make
-qemu-nox-gdb). This starts up QEMU, but QEMU stops just before the
+Open two terminal windows. In one, enter `make qemu-gdb` (or `make
+qemu-nox-gdb`). This starts up QEMU, but QEMU stops just before the
 processor executes the first instruction and waits for a debugging
 connection from GDB. In the second terminal, from the same directory you
 ran `make`, run `make gdb`. You should see something like this,
@@ -464,11 +464,9 @@ The target architecture is assumed to be i8086
 (gdb)
 ```
 
-We provided a `.gdbinit` file that set up GDB to debug the 16-bit code
-used during early boot and directed it to attach to the listening
-QEMU. Due to changes in recent GDB, we've provided the `make gdb`
-target to force GDB to load the `.gdbinit` file. Running `gdb` will
-not load it.
+The `make gdb` target runs a script called `.gdbrc`, which sets up GDB
+to debug the 16-bit code used during early boot and directs it to attach
+to the listening QEMU.
 
 The following line:
 
