@@ -445,10 +445,10 @@ Open two terminal windows. In one, enter make qemu-gdb (or make
 qemu-nox-gdb). This starts up QEMU, but QEMU stops just before the
 processor executes the first instruction and waits for a debugging
 connection from GDB. In the second terminal, from the same directory you
-ran `make`, run `gdb`. You should see something like this,
+ran `make`, run `make gdb`. You should see something like this,
 
 ```lang-sh
-athena% gdb
+athena% make gdb
 GNU gdb (GDB) 6.8-debian
 Copyright (C) 2008 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
@@ -465,7 +465,10 @@ The target architecture is assumed to be i8086
 ```
 
 We provided a `.gdbinit` file that set up GDB to debug the 16-bit code
-used during early boot and directed it to attach to the listening QEMU.
+used during early boot and directed it to attach to the listening
+QEMU. Due to changes in recent GDB, we've provided the `make gdb`
+target to force GDB to load the `.gdbinit` file. Running `gdb` will
+not load it.
 
 The following line:
 

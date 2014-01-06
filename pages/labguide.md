@@ -55,7 +55,8 @@ kernel.
 
 You can start JOS with a specific user environment using `make
 run-name` (or you can edit `kern/init.c` directly). To make QEMU wait
-for GDB to attach, use the `run-name-gdb` variant.
+for GDB to attach, use the `run-name-gdb` variant. To start gdb, run
+`make gdb`.
 
 You can symbolically debug user code, just like you can kernel code, but
 you have to tell GDB which [symbol table](#jos-obj-) to use with the
@@ -101,6 +102,8 @@ Exiting GDB will shut down QEMU.
     press `Ctrl-a x`. This is particularly useful over SSH connections
     to Athena dialups because the VGA window consumes a lot of
     bandwidth.
+- `make gdb`
+   - Start `gdb` with the settings in the JOS `.gdbinit`.
 - `make qemu-gdb`
   - Like `make qemu`, but rather than passively accepting GDB
     connections at any time, this pauses at the first machine
