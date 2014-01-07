@@ -4,10 +4,12 @@ layout: default
       <div class="row">
         <div class="col-md-3">
 	  <div class="bs-sidebar hidden-print affix">
+            <p><strong>{{ page.title }}</strong><br>due {{ page.date }}</p>
 	    {{{ page.table_of_contents }}}
 	  </div>
 	</div>
         <div class="col-md-9">
+          <h1 class="visible-print">{{ page.title }} <small>due {{ page.date }}</small></h1>
           {{{ page.content }}}
         </div>
       </div>
