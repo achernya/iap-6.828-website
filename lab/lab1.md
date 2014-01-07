@@ -1020,11 +1020,6 @@ offending function.
 > 32-bit words does each recursive nesting level of `test_backtrace`
 > push on the stack, and what are those words?
 
-Note that, for this exercise to work properly, you should be using the
-patched version of QEMU available on the [tools](../../tools.html) page
-or on Athena. Otherwise, you'll have to manually translate all
-breakpoint and memory addresses to linear addresses.
-
 The above exercise should give you the information you need to implement
 a stack backtrace function, which you should call `mon_backtrace()`. A
 prototype for this function is already waiting for you in
