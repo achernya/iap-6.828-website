@@ -25,7 +25,7 @@ may find this [CS-oriented overview of
 Git](http://eagain.net/articles/git-for-computer-scientists/) useful.
 
 The URL for the course Git repository is
-[http://pdos.csail.mit.edu/6.828/2012/jos.git](http://pdos.csail.mit.edu/6.828/2012/jos.git).
+`https://exokernel.scripts.mit.edu/joslab.git`.
 To install the files in your Athena account, you need to *clone* the
 course repository, by running the commands below. You must use an i386
 Athena machine; that is, `uname -a` should mention `i386 GNU/Linux` or
@@ -36,7 +36,7 @@ Athena machine; that is, `uname -a` should mention `i386 GNU/Linux` or
 athena% mkdir ~/6.828
 athena% cd ~/6.828
 athena% add git
-athena% git clone http://pdos.csail.mit.edu/6.828/2012/jos.git lab
+athena% git clone https://exokernel.scripts.mit.edu/joslab.git lab
 Cloning into lab...
 athena% cd lab
 athena%
@@ -53,15 +53,15 @@ Created commit 60d2135: my solution for lab1 exercise 9
 athena%
 ```
 
-You can keep track of your changes by using the git diff command.
-Running git diff will display the changes to your code since your last
-commit, and git diff origin/lab1 will display the changes relative to
+You can keep track of your changes by using the `git diff` command.
+Running `git diff` will display the changes to your code since your last
+commit, and `git diff origin/lab1` will display the changes relative to
 the initial code supplied for this lab. Here, `origin/lab1` is the name
 of the git branch with the initial code you downloaded from our server
 for this assignment.
 
 We have set up the appropriate compilers and simulators for you on
-Athena. To use them, run `add -f 6.828`. You must run this command every
+Athena. To use them, run `add exokernel`. You must run this command every
 time you log in (or add it to your `~/.environment` file). If you get
 obscure errors while compiling or running `qemu`, double check that you
 added the course locker.
@@ -101,13 +101,13 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD0lnnkoHSi4JDFA ...
 Continue? [Y/n] Y
 
 Login to 6.828 submission website.
-If you do not have an account yet, sign up at https://pdos.csail.mit.edu/6.828/submit/
+If you do not have an account yet, sign up at https://exokernel.scripts.mit.edu/submit/
 before continuing.
 Username: <your Athena username>
 Password: <your 6.828 password>
 Your public key has been successfully updated.
 Setting up hand-in Git repository...
-Adding remote repository ssh://josgit@am.csail.mit.edu/joslab.git as 'handin'.
+Adding remote repository ssh://josgit@exokernel.mit.edu/joslab.git as 'handin'.
 Done! Use 'make handin' to submit your lab code.
 athena%
 ```
