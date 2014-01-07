@@ -27,9 +27,8 @@ Git](http://eagain.net/articles/git-for-computer-scientists/) useful.
 The URL for the course Git repository is
 `https://exokernel.scripts.mit.edu/joslab.git`.
 To install the files in your Athena account, you need to *clone* the
-course repository, by running the commands below. You must use an i386
-Athena machine; that is, `uname -a` should mention `i386 GNU/Linux` or
-`i686 GNU/Linux`. You can log into a public i386 Athena host with
+course repository, by running the commands below.
+You can log into a public Athena host with
 `ssh -X athena.dialup.mit.edu`.
 
 ```lang-sh
