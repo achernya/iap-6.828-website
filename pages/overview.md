@@ -171,8 +171,6 @@ Staff
 
 - Paul Quimby
 
-- Daniel Gray
-
 - Alex Dehnert
 
 TA office hours
