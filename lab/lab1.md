@@ -610,7 +610,7 @@ at which to start disassembling.
 
 > **Exercise 3**
 
-> Take a look at the [lab tools guide](../../labguide.html),
+> Take a look at the [lab tools guide](../../labguide),
 > especially the section on GDB commands. Even if you're familiar with
 > GDB, this includes some esoteric GDB commands that are useful for OS
 > work.
