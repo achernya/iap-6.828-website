@@ -35,6 +35,19 @@ readings :
   rss:
     enable: false
 
+lecture-notes:
+  paginator:
+    enable: false
+  rss:
+    enable: false
+
+slides :
+  use: static
+  paginator:
+    enable: false
+  rss:
+    enable: false
+
 widgets :
   syntax :
     use : prettify

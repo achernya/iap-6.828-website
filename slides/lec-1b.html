@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Alex Chernyakhovsky" />
+  <title>IAP 6.828: PC hardware and x86</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="reveal.js/css/reveal.min.css"/>
+    <style type="text/css">code{white-space: pre;}</style>
+    <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+  <link rel="stylesheet" media="print" href="reveal.js/css/print/pdf.css" />
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">IAP 6.828: PC hardware and x86</h1>
+    <h2 class="author">Alex Chernyakhovsky</h2>
+    <h3 class="date">January 7, 2014</h3>
+</section>
+
+<section><section id="what-is-as-computer" class="titleslide slide level1"><h1>What is as computer?</h1></section><section id="a-laptop" class="slide level2">
+<h1>A laptop?</h1>
+<figure>
+<img src="images/rMBP.jpg" alt="Retina Macbook Pro" /><figcaption>Retina Macbook Pro</figcaption>
+</figure>
+</section><section id="or-a-desktop" class="slide level2">
+<h1>Or a desktop?</h1>
+<figure>
+<img src="images/ibm5150pc.jpg" alt="IBM 5150" /><figcaption>IBM 5150</figcaption>
+</figure>
+</section><section id="or-perhaps-a-server" class="slide level2">
+<h1>Or perhaps a server?</h1>
+<figure>
+<img src="images/dell-r720xd.jpg" alt="Dell R720xd" /><figcaption>Dell R720xd</figcaption>
+</figure>
+</section><section id="all-of-them" class="slide level2">
+<h1>All of them!</h1>
+<ul>
+<li>General purpose</li>
+<li>Programmable</li>
+<li>In this case, Intel x86</li>
+<li>How do we make such different hardware do useful things?</li>
+</ul>
+</section></section>
+<section><section id="computer-architecture" class="titleslide slide level1"><h1>Computer Architecture</h1></section><section id="von-neumann-architecture" class="slide level2">
+<h1>Von Neumann Architecture</h1>
+<figure>
+<img src="images/von-neumann-arch.jpg" />
+</figure>
+<ul>
+<li>IO: communicate data to/from devies</li>
+<li>CPU: performs the computation</li>
+<li>Memory: <em>N</em> words of <em>B</em> bits</li>
+</ul>
+</section><section id="programs" class="slide level2">
+<h1>Programs</h1>
+<ul>
+<li>Just data</li>
+<li>Stored in RAM</li>
+<li>CPU interprets instructions</li>
+</ul>
+</section><section id="x86-instruction-set" class="slide level2">
+<h1>x86 Instruction Set</h1>
+<ul>
+<li>6 general-purpose registers, base pointer, stack pointer</li>
+<li>All registers 32-bit wide</li>
+<li>Instruction Pointer register: <code>EIP</code></li>
+<li>Variable-length instructions</li>
+<li><code>EIP</code> incremented to move to next instruction</li>
+<li><code>CALL</code>, <code>RET</code>, <code>JMP</code> can modify <code>EIP</code></li>
+</ul>
+</section><section id="x86-is-backwards-compatible" class="slide level2">
+<h1>x86 is backwards compatible</h1>
+<ul>
+<li>Small registers contained in larger ones</li>
+<li>8-, 16-, 32-bit</li>
+</ul>
+<figure>
+<img src="images/intel-x86-registers.png" alt="Registers" /><figcaption>Registers</figcaption>
+</figure>
+</section><section id="eflags-register" class="slide level2">
+<h1><code>EFLAGS</code> register</h1>
+<figure>
+<img src="images/intel-eflags.png" />
+</figure>
+</section><section id="mov-family" class="slide level2">
+<h1><code>mov family</code></h1>
+<ul>
+<li>Moves data into/out of registers</li>
+<li><code>movl %eax,%edx</code>; <code>edx=eax</code>; register</li>
+<li><code>movl $0x123,%edx</code>; <code>edx=0x123</code>; immediate</li>
+<li><code>movl 0x123,%edx</code>; <code>edx=*(int32_t*)0x123</code>; direct</li>
+<li><code>movl (%ebx),%edx</code>; <code>edx=*(int32_t*)ebx</code>; indirect</li>
+<li><code>movl 4(%ebx),%edx</code>; <code>edx=*(int32_t*)(ebx+4)</code>; displaced</li>
+</ul>
+</section><section id="stack" class="slide level2">
+<h1>Stack</h1>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Example instruction</th>
+<th style="text-align: left;">What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>pushl %eax</code></td>
+<td style="text-align: left;"><code>subl $4,%esp</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>movl %eax,(%esp)</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>popl %eax</code></td>
+<td style="text-align: left;"><code>movl (%esp),%eax</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>addl $4,%esp</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>call 0x12345</code></td>
+<td style="text-align: left;"><code>pushl %eip</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>movl 0x12345,%eip</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>ret</code></td>
+<td style="text-align: left;"><code>popl %eip</code></td>
+</tr>
+</tbody>
+</table>
+</section><section id="segmentation-registers" class="slide level2">
+<h1>Segmentation Registers</h1>
+<ul>
+<li>Used in earlier versions of x86 to choose &quot;segments&quot; of memory</li>
+<li>Adds additional 4 bits to 16-bit address, for 20-bit bus</li>
+<li>Makes memory management more complicated</li>
+<li>Mostly unused in this class</li>
+<li>Disabled in 64-bit x86</li>
+</ul>
+</section><section id="legacy-modes" class="slide level2">
+<h1>Legacy modes</h1>
+<ul>
+<li>CPU starts in 16-bit mode</li>
+<li><code>boot.S</code> switches to 32-bit mode</li>
+<li><code>.code32</code> in <code>boot.S</code> tells assembler to emit &quot;this is a 32-bit instruction&quot; prefix</li>
+</ul>
+</section><section id="io-ports" class="slide level2">
+<h1>IO Ports</h1>
+<pre><code>
+#define DATA_PORT    0x378
+#define STATUS_PORT  0x379
+#define   BUSY 0x80
+#define CONTROL_PORT 0x37A
+#define   STOBE 0x01
+void
+lpt_putc(int c) {
+  /* wait for printer to consume previous byte */
+  while ((inb(STATUS_PORT) &amp; BUSY) == 0)
+    ;
+  /* put the byte on the parallel lines */
+  outb(DATA_PORT, c)
+
+  /* tell the printer to look at the data */
+  outb(CONTROL_PORT, STROBE);
+  outb(CONTROL_PORT, 0);
+}
+</code></pre>
+<ul>
+<li>8086: Only 1024 I/O addresses</li>
+</ul>
+</section><section id="memory-mapped-io" class="slide level2">
+<h1>Memory-mapped IO</h1>
+<ul>
+<li>Use normal address
+<ul>
+<li>No need for special instructions</li>
+</ul></li>
+<li>No 1024 limit
+<ul>
+<li>System controller routes to device</li>
+</ul></li>
+<li>Works like &quot;magic&quot; memory
+<ul>
+<li>Addressed and accessed like memory</li>
+<li>But does not behave like memory</li>
+<li>Reads and writes have &quot;side effects&quot;</li>
+<li>Read result can change due to external events</li>
+</ul></li>
+</ul>
+</section><section id="physical-memory-layout" class="slide level2">
+<h1>Physical memory layout</h1>
+<pre><code>+------------------+  &lt;- 0xFFFFFFFF (4GB)
+|      32-bit      |
+|  memory mapped   |
+|     devices      |
+/\/\/\/\/\/\/\/\/\/\
+
+/\/\/\/\/\/\/\/\/\/\
+|      Unused      |
++------------------+  &lt;- depends on amount of RAM
+| Extended Memory  |
++------------------+  &lt;- 0x00100000 (1MB)
+|     BIOS ROM     |
++------------------+  &lt;- 0x000F0000 (960KB)
+|  16-bit devices, |
+|  expansion ROMs  |
++------------------+  &lt;- 0x000C0000 (768KB)
+|   VGA Display    |
++------------------+  &lt;- 0x000A0000 (640KB)
+|    Low Memory    |
++------------------+  &lt;- 0x00000000</code></pre>
+</section></section>
+<section><section id="programming-for-x86" class="titleslide slide level1"><h1>Programming for x86</h1></section><section id="x86-instructions" class="slide level2">
+<h1>x86 instructions</h1>
+<ul>
+<li>Instruction classes
+<ul>
+<li>Data movement: <code>MOV</code>, <code>PUSH</code>, <code>POP</code>, ...</li>
+<li>Arithmetic: <code>TEST</code>, <code>SHL</code>, <code>ADD</code>, ...</li>
+<li>IO: <code>IN</code>, <code>OUT</code></li>
+<li>Control: <code>JMP</code>, <code>JZ</code>, <code>JNZ</code>, <code>CALL</code>, <code>RET</code>, ...</li>
+<li>System: <code>IRET</code>, <code>INT</code></li>
+</ul></li>
+<li>Intel architecture manual, Volume 2<a href="http://sipb.mit.edu/iap/6.828/readings/ia32/IA32-2A.pdf">A</a>,<a href="http://sipb.mit.edu/iap/6.828/readings/ia32/IA32-2B.pdf">B</a>
+<ul>
+<li>Intel syntax: <code>op dst, src</code></li>
+<li>AT&amp;T (gas/gcc) syntax: <code>op src, dst</code></li>
+<li>We use AT&amp;T syntax</li>
+</ul></li>
+</ul>
+</section><section id="calling-convention" class="slide level2">
+<h1>Calling convention</h1>
+<ul>
+<li>Arguments pushed onto stack in reverse order</li>
+<li><code>CALL</code> saves current <code>EIP</code> onto stack</li>
+<li>Prologue: <code>pushl %ebp; movl %esp,%ebp</code></li>
+<li>Epilogue: <code>movl %ebp,%esp; popl %ebp</code></li>
+<li>Saved <code>EBP</code> form a chain, walk to form stack trace</li>
+</ul>
+</section><section id="safe-registers" class="slide level2">
+<h1>Safe registers?</h1>
+<ul>
+<li><code>EAX</code> contains return value. <code>ECX</code> and <code>EDX</code> may be destroyed
+<ul>
+<li>Caller must save values if needed</li>
+</ul></li>
+<li><code>EBP</code>, <code>EBX</code>, <code>ESI</code>, <code>EDI</code> are callee saved
+<ul>
+<li><code>EBP</code> is not necessary, but preserved to make debugging easier</li>
+</ul></li>
+</ul>
+</section><section id="c-to-running-binary" class="slide level2">
+<h1>C to Running Binary</h1>
+<ul>
+<li><code>gcc</code> transforms C source into .asm files</li>
+<li><code>gas</code> transforms asm source into object files</li>
+<li><code>ld</code> combines object files into a binary (&quot;a.out&quot;)</li>
+<li>a.out is loaded into memory and run by kernel</li>
+</ul>
+</section></section>
+<section><section id="developing-operating-systems" class="titleslide slide level1"><h1>Developing Operating Systems</h1></section><section id="qemu" class="slide level2">
+<h1>QEMU</h1>
+<ul>
+<li>Emulates entire computer
+<ul>
+<li>CPU, RAM</li>
+<li>Other devices</li>
+</ul></li>
+<li>Runs on Linux</li>
+<li>Lets you attach a debugger</li>
+</ul>
+</section><section id="emulating-memory" class="slide level2">
+<h1>Emulating memory</h1>
+<ul>
+<li>Registers are just an array of integers: <code>int32_t regs[8];</code></li>
+<li><code>EIP</code> is as well: <code>int32_t eip;</code></li>
+<li>RAM is also just an array of bytes! <code>char mem[256*1024*1024]</code></li>
+</ul>
+</section><section id="emulating-the-cpu" class="slide level2">
+<h1>Emulating the CPU</h1>
+<pre><code>for (;;) {
+    read_instruction();
+    switch (decode_instruction_opcode()) {
+    case OPCODE_ADD:
+        int src = decode_src_reg();
+        int dst = decode_dst_reg();
+        regs[dst] += regs[src];
+        break;
+    case OPCODE_SUB:
+        int src = decode_src_reg();
+        int dst = decode_dst_reg();
+        regs[dst] -= regs[src];
+        break;
+    // ...
+    }
+    eip += instruction_length;
+}</code></pre>
+</section><section id="emulating-other-devices" class="slide level2">
+<h1>Emulating other devices</h1>
+<ul>
+<li>Hard disk: file on host</li>
+<li>VGA: draw into window</li>
+<li>Keyboard: accept input from host</li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.min.js"></script>
+
+  <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        theme: 'moon', // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+//          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
+//          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+]});
+    </script>
+  </body>
+</html>
