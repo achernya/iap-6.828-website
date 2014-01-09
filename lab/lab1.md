@@ -1,6 +1,6 @@
 ---
 title: 'Lab 1: Booting a PC'
-date: '2014-1-9'
+date: '2014-1-10'
 ---
 
 Introduction
