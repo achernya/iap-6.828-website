@@ -98,24 +98,11 @@ definitions that will be useful for this lab.
 Before beginning the lab, don't forget to add -f 6.828 to get the 6.828
 version of QEMU.
 
-### Lab Requirements
-
-In this lab and subsequent labs, do all of the regular exercises
-described in the lab and *at least one* challenge problem. (Some
-challenge problems are more challenging than others, of course!)
-Additionally, write up brief answers to the questions posed in the lab
-and a short (e.g., one or two paragraph) description of what you did to
-solve your chosen challenge problem. If you implement more than one
-challenge problem, you only need to describe one of them in the
-write-up, though of course you are welcome to do more. Place the
-write-up in a file called `answers-lab2.txt` in the top level of your
-`lab` directory before handing in your work.
-
 ### Hand-In Procedure
 
 When you are ready to hand in your lab code and write-up, add your
 `answers-lab2.txt` to the Git repository, commit your changes, and then
-run make handin.
+run `make handin`.
 
 ```lang-sh
 athena% git add answers-lab2.txt
