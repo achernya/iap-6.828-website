@@ -204,12 +204,12 @@ we can ignore segmentation throughout the JOS labs and focus solely on
 page translation.
 
 Recall that in part 3 of lab 1, we installed a simple page table so that
-the kernel could run at its link address of 0xf0100000, even though it
+the kernel could run at its link address of `0xf0100000`, even though it
 is actually loaded in physical memory just above the ROM BIOS at
-0x00100000. This page table mapped only 4MB of memory. In the virtual
+`0x00100000`. This page table mapped only 4MB of memory. In the virtual
 memory layout you are going to set up for JOS in this lab, we'll expand
 this to map the first 256MB of physical memory starting at virtual
-address 0xf0000000 and to map a number of other regions of virtual
+address `0xf0000000` and to map a number of other regions of virtual
 memory.
 
 > **Exercise 3**
@@ -285,10 +285,10 @@ and then initializing that memory. However, the kernel, like any other
 software, cannot bypass virtual memory translation and thus cannot
 directly load and store to physical addresses. One reason JOS remaps of
 all of physical memory starting from physical address 0 at virtual
-address 0xf0000000 is to help the kernel read and write memory for which
+address `0xf0000000` is to help the kernel read and write memory for which
 it knows just the physical address. In order to translate a physical
 address into a virtual address that the kernel can actually read and
-write, the kernel must add 0xf0000000 to the physical address to find
+write, the kernel must add `0xf0000000` to the physical address to find
 its corresponding virtual address in the remapped region. You should use
 `KADDR(pa)` to do that addition.
 
@@ -296,9 +296,9 @@ The JOS kernel also sometimes needs to be able to find a physical
 address given the virtual address of the memory in which a kernel data
 structure is stored. Kernel global variables and memory allocated by
 `boot_alloc()` are in the region where the kernel was loaded, starting
-at 0xf0000000, the very region where we mapped all of physical memory.
+at `0xf0000000`, the very region where we mapped all of physical memory.
 Thus, to turn a virtual address in this region into a physical address,
-the kernel can simply subtract 0xf0000000. You should use `PADDR(va)` to
+the kernel can simply subtract `0xf0000000`. You should use `PADDR(va)` to
 do that subtraction.
 
 ### Reference counting
@@ -455,7 +455,7 @@ multiple small allocation units back into larger units when possible.
 Think about the issues that might arise in such a system.
 
 **This completes the lab.** Make sure you pass all of the make grade
-tests and don't forget to write up your answers to the questions and a
-description of your challenge exercise solution in `answers-lab2.txt`.
-Commit your changes (including adding `answers-lab2.txt`) and type make
-handin in the `lab` directory to hand in your lab.
+tests and don't forget to write up your answers to the questions in
+`answers-lab2.txt`.  Commit your changes (including adding
+`answers-lab2.txt`) and type `make handin` in the `lab` directory to
+hand in your lab.
