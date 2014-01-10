@@ -95,7 +95,7 @@ requires you to use and understand many of the definitions they contain.
 You may want to review `inc/mmu.h`, too, as it also contains a number of
 definitions that will be useful for this lab.
 
-Before beginning the lab, don't forget to add -f 6.828 to get the 6.828
+Before beginning the lab, don't forget to `add exokernel` to get the 6.828
 version of QEMU.
 
 ### Hand-In Procedure
