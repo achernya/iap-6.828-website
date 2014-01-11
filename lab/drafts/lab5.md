@@ -4,13 +4,14 @@ due_date: '2014-1-28'
 ---
 
 Introduction: Spawn and shell
------------------------------
+=============================
 
 In this lab, you will implement `spawn`, a library call that loads and
 runs on-disk executables. You will then flesh out your kernel and
 library operating system enough to run a shell on the console.
 
-### Getting Started
+Getting Started
+---------------
 
 Use Git to fetch the latest version of the course repository, and then
 create a local branch called `lab5` based on our lab5 branch,
