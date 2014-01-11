@@ -92,7 +92,7 @@ the very least, you will need to be able to understand the fragments of
 inline assembly language (`asm` statements) that already exist in the
 source code we gave you. You can find several sources of information on
 GCC inline assembly language on the class [reference
-materials](../../reference.html) page.
+materials](../../reference/) page.
 
 Part A: User Environments and Exception Handling
 ------------------------------------------------
