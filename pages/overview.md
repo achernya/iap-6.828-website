@@ -150,7 +150,7 @@ Recitation
 ----------
 
 There will be an optional recitation on C on Saturday, January 11,
-2014 from 12pm-1pm in the W20-5 Lounge.
+2014 from 1pm-2pm in the W20-5 Lounge.
 
 Staff
 -----
