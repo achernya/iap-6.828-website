@@ -214,13 +214,6 @@ page directory and page tables pointed to by `env_pgdir`. To run an
 environment, the kernel must set up the CPU with *both* the saved
 registers and the appropriate address space.
 
-Our `struct Env` is analogous to `struct proc` in xv6. Both structures
-hold the environment's (i.e., process's) user-mode register state in a
-`Trapframe` structure. In JOS, individual environments do not have their
-own kernel stacks as processes do in xv6. There can be only one JOS
-environment active in the kernel at a time, so JOS needs only a *single*
-kernel stack.
-
 ### Allocating the Environments Array
 
 In lab 2, you allocated memory in `mem_init()` for the `pages[]` array,
