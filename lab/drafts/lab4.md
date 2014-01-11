@@ -1,14 +1,7 @@
 ---
 title: 'Lab 4: Preemptive Multitasking'
-due_date: '2014-1-28'
+due_date: 'AB: 2014-1-24; C: 2014-1-28'
 ---
-
-Overview
---------
-
-This lab is traditionally presented as two separate labs. This
-document will refer to the first half of this lab as "lab4" and the
-second half as "lab5". Both parts are due together.
 
 Introduction: Multitasking
 --------------------------
