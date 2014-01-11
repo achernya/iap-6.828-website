@@ -149,31 +149,31 @@ Lectures will be held on Tuesday and Thursday from 7:00pm to 9:00pm in
 Recitation
 ----------
 
-TBD
+There will be an optional recitation on C on Saturday, January 11,
+2014 from 12pm-1pm in the W20-5 Lounge.
 
 Staff
 -----
-
 
 **Course mailing list**: `sipb-iap-6.828@mit.edu`
 
 **Instructors**
 
 - Alex Chernyakhovsky
-
 - Geoffrey Thomas
-
 - Kata (Patrick Hurst)
-
 - Adam Glasgall
-
 - Nathan Arce
-
 - Paul Quimby
-
 - Alex Dehnert
 
-TA office hours
----------------
+Office hours
+------------
 
-TBD
+- Monday: 8pm-10pm, W20-5 Lounge (Alex Chernyakhovsky)
+- Tuesday: none
+- Wednesday: 2pm-4pm, 32-G9 (Kata); 6pm-8pm, W20-5 Lounge (Adam Glasgall)
+- Thursday: 2pm-4pm, 32-G9 (Kata)
+- Friday: none
+- Saturday: 1pm-3pm, W20-5 Lounge (Geoffrey Thomas)
+- Sunday: none
