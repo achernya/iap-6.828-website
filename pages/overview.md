@@ -170,7 +170,7 @@ Staff
 Office hours
 ------------
 
-- Monday: 8pm-10pm, W20-5 Lounge (Alex Chernyakhovsky)
+- Monday: 8pm-10pm, W20-5 Lounge (Alex Chernyakhovsky, Nathan Arce)
 - Tuesday: none
 - Wednesday: 2pm-4pm, 32-G9 (Kata); 6pm-8pm, W20-5 Lounge (Adam Glasgall)
 - Thursday: 2pm-4pm, 32-G9 (Kata)
