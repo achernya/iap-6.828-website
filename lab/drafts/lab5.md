@@ -416,9 +416,9 @@ your submission with make grade and hand it in with make handin.
 >     basic understanding of the file I/O in JOS? Feel free to suggest
 >     things we could improve.
 
-**This completes the lab.** As usual, don't forget to run make grade and
-to write up your answers and a description of your challenge exercise
-solution. Before handing in, use `git status` and `git diff` to examine your
-changes and don't forget to `git add answers-lab5.txt`. When you're ready,
-commit your changes with `git commit -am 'my solutions to lab 5'`, then
-`make handin` to submit your solution.
+**This completes the lab.** As usual, don't forget to run `make grade`
+and to write up your answers. Before handing in, use `git status` and
+`git diff` to examine your changes and don't forget to `git add
+answers-lab5.txt`. When you're ready, commit your changes with `git
+commit -am 'my solutions to lab 5'`, then `make handin` to submit your
+solution.

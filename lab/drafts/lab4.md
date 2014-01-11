@@ -981,11 +981,11 @@ was received.
 > mechanism. You might find it interesting to read `user/primes.c` to
 > see all the forking and IPC going on behind the scenes.
 
-**This ends part C.** Make sure you pass all of the make grade tests and
-don't forget to write up your answers to the questions and a description
-of your challenge exercise solution in `answers-lab4.txt`.
+**This ends part C.** Make sure you pass all of the `make grade` tests
+and don't forget to write up your answers to the questions in
+`answers-lab4.txt`.
 
-Before handing in, use `git status` and `git diff` to examine your changes
-and don't forget to `git add answers-lab4.txt`. When you're ready, commit
-your changes with `git commit -am 'my solutions to lab 4'`, then `make
-handin` and follow the directions.
+Before handing in, use `git status` and `git diff` to examine your
+changes and don't forget to `git add answers-lab4.txt`. When you're
+ready, commit your changes with `git commit -am 'my solutions to lab
+4'`, then `make handin` and follow the directions.

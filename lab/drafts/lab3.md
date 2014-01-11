@@ -76,7 +76,7 @@ $ git diff lab2
 ```
 
 You may also want to take another look at the [lab tools
-guide](../../labguide.html), as it includes information on debugging
+guide](../../labguide/), as it includes information on debugging
 user code that becomes relevant in this lab.
 
 ### Lab Requirements
@@ -884,11 +884,10 @@ malicious user applications (such as `user/evilhello`).
 > [00001000] free env 00001000
 > ```
         
-**This completes the lab.** Make sure you pass all of the make grade
-tests and don't forget to write up your answers to the questions and a
-description of your challenge exercise solution in `answers-lab3.txt`.
-Commit your changes and type make handin in the `lab` directory to
-submit your work.
+**This completes the lab.** Make sure you pass all of the `make grade`
+tests and don't forget to write up your answers to the questions in
+`answers-lab3.txt`.  Commit your changes and type make handin in the
+`lab` directory to submit your work.
 
 Before handing in, use `git status` and `git diff` to examine your changes
 and don't forget to `git add answers-lab3.txt`. When you're ready, commit
