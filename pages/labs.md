@@ -5,5 +5,5 @@ submenu: true
 ---
 
 {{# lab.all }}
-- [{{ title }}]({{url}}) ({{date}})
+- [{{ title }}]({{url}}) ({{due_date}})
 {{/ lab.all }}
