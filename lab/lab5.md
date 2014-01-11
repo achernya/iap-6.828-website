@@ -1,5 +1,5 @@
 ---
-title: 'Lab 4: Preemptive Multitasking'
+title: 'Lab 5: Spawn and Shell'
 due_date: '2014-1-28'
 ---
 

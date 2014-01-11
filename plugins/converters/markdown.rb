@@ -20,7 +20,7 @@ class Ruhoh
 
       def self.tocconvert(content)
         require 'redcarpet'
-        toc = Redcarpet::Markdown.new(Redcarpet::Render::HTML_TOC)
+        toc = Redcarpet::Markdown.new(Redcarpet::Render::HTML_TOC.new(:nesting_level => 3))
         toc.render(content)
       end
     end

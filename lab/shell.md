@@ -1,6 +1,6 @@
 ---
 title: 'Exercise: Shell'
-date: '2014-1-7'
+due_date: '2014-1-7'
 ---
 
 This assignment will make you more familiar with the Unix system call

@@ -1,6 +1,6 @@
 ---
 title: 'Lab 3: User Environments'
-date: '2014-1-21'
+due_date: 'A: 2014-1-17; B: 2014-1-21'
 ---
 
 Introduction
@@ -81,8 +81,8 @@ user code that becomes relevant in this lab.
 
 ### Lab Requirements
 
-This lab is divided into two parts, A and B, to provide a logical
-stopping point. Both parts are due together.
+This lab is divided into two parts, A and B. Part A is due Friday,
+January 17th. Part B is due Tuesday, January 21st.
 
 ### Inline Assembly
 
