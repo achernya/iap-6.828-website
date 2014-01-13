@@ -273,3 +273,14 @@ the correct privilege level.
 This same functionality will be used in Lab 4 for switching between
 running processes.
 
+## Some hints on Lab 3
+
+- The macros `ROUNDUP` and `ROUNDDOWN` are very useful.
+
+- You'll have to write code that can load ELF files. You may find the
+  code in `boot/main.c` useful, as well as `inc/elf.h`.
+
+- If you get a strange error when trying to run your first userspace
+  environment, make sure your `env_init` sets up your environments
+  such that the first `env_alloc` call uses `envs[0]`, as that's what
+  the test code expects.
