@@ -1,5 +1,5 @@
 # Lecture 3: System calls and interrupts
-[Slides](TODO/LINK/TO/THE/MEMES)
+[Slides](../../slides/lec-3.html)
 
 ## Announcements
 
@@ -128,7 +128,7 @@ system call, which is what we see here.
 int main(int argc, char* argv[]) {
     int status;
     if (fork() == 0) {
-       const char* args[] = {"sh", "-c", "ls"};
+       const char* args[] = {"sh", "-c", "ls", 0};
        execv("/bin/sh", args);
     }
     wait(&status);
