@@ -738,7 +738,7 @@ on.
 > `kern/syscall.c`) with the appropriate arguments, and then arranging
 > for the return value to be passed back to the user process in
 > `%eax`.  Finally, you need to implement `syscall()` in
-> `kern/syscall.c`. Make sure `syscall()` returns `-E_INVAL` if the
+> `kern/syscall.c`. Make sure `syscall()` returns `-E_NO_SYS` if the
 > system call number is invalid. You should read and understand
 > `lib/syscall.c` (especially the inline assembly routine) in order to
 > confirm your understanding of the system call interface. You may
