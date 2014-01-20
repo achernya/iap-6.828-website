@@ -39,7 +39,7 @@ Switched to a new branch "lab4"
 athena% git merge lab3
 Merge made by recursive.
 ...
-athena% 
+athena%
 ```
 
 Lab 4 contains a number of new source files, some of which you should
@@ -246,6 +246,11 @@ SMP: CPU 1 starting
 SMP: CPU 2 starting
 SMP: CPU 3 starting
 ```
+
+Note that until you set up IRQ handlers in part C, running code with more CPUs
+than processes may cause a general protection fault, since any idle CPUs will
+eventually receive a timer interrupt and fail to find the handler, which causes
+a GPF.
 
 #### Locking
 
@@ -743,7 +748,7 @@ for the user page fault handler:
 > following messages, with interspersed 'new env', 'free env', and
 > 'exiting gracefully' messages. The messages may not appear in this
 > order, and the environment IDs may be different.
-> 
+>
 > ```lang-html
 > 1000: I am ''
 > 1001: I am '0'
@@ -761,7 +766,7 @@ for the user page fault handler:
 > 1005: I am '111'
 > 1006: I am '101'
 > ```
-       
+
 
 Part C: Preemptive Multitasking and Inter-Process communication (IPC)
 ---------------------------------------------------------------------
