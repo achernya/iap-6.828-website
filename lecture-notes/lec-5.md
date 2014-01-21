@@ -208,3 +208,49 @@ Mutexes can guard against this because the notion of ownership allows
 for a process to be temporarily promoted in priority to relinquish the
 lock so that the higher-priority process can perform work.
 
+## Bringing up multiple CPUs
+
+One of the new features Lab 4 introduces to JOS is the ability to use
+more than one processor. All of that talk about locking finally sound
+useful? The x86 standard for bringing up multiple CPUs is actually
+really touchy, and doing it wrong results in the CPU not coming up. In
+fact, the Lab 4 JOS will not boot on real hardware, but will work fine
+in QEMU. If you're interested in getting your JOS to work on real
+hardware, talk to us at the end of the course---we just spent the
+better part of the weekend making sure this is possible.
+
+The CPUs on the system are divided into two categories---the BSP, boot
+processor, and the APs, application processors. The BSP is the only
+processor running JOS until you bring up the APs. However, since the
+processors are halted, we can't just ask them to start. Fortunately,
+each processor has a LAPIC (local advanced programmable interrupt
+controller) that we *can* talk to. There's a "universal startup
+algorithm" that goes as follows:
+
+1. Find the neighbor's APIC ID
+2. Send a INIT message from your APIC to the target APIC
+3. Wait 10 milliseconds
+4. Send a STARTUP message
+5. Wait 200 microseconds
+6. Send another STARTUP message
+7. Wait 200 microseconds, again.
+
+The LAPIC is the first use of memory-mapped IO in JOS. You'll have
+your code in `pmap.c` to support the MMIO region. The address of the
+APIC is determined by reading the BIOS configuration area as specified
+by the Multiprocessing 1.4 standard (MP1.4). Make sure that you mark
+this page as reserved.
+
+## New system calls
+
+One of the new system calls you'll get to implement is `sys_exofork`,
+which creates a new environment with the same trap frame as the
+currently running environment, except that the return value of the
+syscall will be 0. This is useful for implementing `fork`, which is
+part of the lab. There's a subtlety here in that userspace
+`sys_exofork` **must** be inline, unlike other syscalls. This is
+mostly out of convenient to you to implement fork---if we had used the
+not-inlined version that routed via `syscall`, there would be
+additional stack frames present which are unwanted for where we want
+the child's `ESP` to be. With it being inline, those new stack frames
+are never created.
