@@ -184,7 +184,7 @@ Semaphores rely on a counter. Every time a process wishes to acquire
 the semaphore, it calls `wait()`, which decrements the counter. If
 this operation causes the counter to become negative, the process is
 blocked and execution yields. When the semaphore is released,
-`signal()` increments the counter, and unblocks a waiting process. To
+`notify()` increments the counter, and unblocks a waiting process. To
 avoid starvation, the counter is usually paired with a FIFO queue of
 the blocked processes.
 
@@ -249,7 +249,7 @@ currently running environment, except that the return value of the
 syscall will be 0. This is useful for implementing `fork`, which is
 part of the lab. There's a subtlety here in that userspace
 `sys_exofork` **must** be inline, unlike other syscalls. This is
-mostly out of convenient to you to implement fork---if we had used the
+mostly out of convenience to you to implement fork---if we had used the
 not-inlined version that routed via `syscall`, there would be
 additional stack frames present which are unwanted for where we want
 the child's `ESP` to be. With it being inline, those new stack frames
